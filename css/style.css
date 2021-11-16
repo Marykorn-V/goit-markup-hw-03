@@ -38,11 +38,16 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 /* Site nav */
 
 .container.content {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ececec;
 }
 .container {
   width: 1200px;
@@ -50,7 +55,7 @@ a {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
 }
 .nav-container {
   display: flex;
@@ -123,9 +128,8 @@ a {
   color: var(--accent-text-color);
 }
 /* Шапка */
-.hero {
-  margin-bottom: 94px;
 
+.hero {
   background-color: var(--second-bgc-color);
   color: var(--primary-wight-color);
 
@@ -161,8 +165,9 @@ a {
 }
 /* Main */
 
-.feature {
-  margin-bottom: 94px;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .list {
   margin-top: 0;
@@ -173,7 +178,6 @@ a {
   display: flex;
 }
 .work-list {
-  background-color: wheat;
   width: calc((100%- (30px * 3)) / 4);
   margin-right: 30px;
 }
@@ -192,9 +196,6 @@ a {
   line-height: 16px;
   text-transform: uppercase;
 }
-.section-work {
-  margin-bottom: 94px;
-}
 .images-list:not(:last-child) {
   margin-right: 30px;
 }
@@ -202,13 +203,10 @@ a {
   display: block;
 }
 .section.command {
-  padding-top: 94px;
-
   background-color: var(--third-bgc-color);
 }
 .list.command {
   display: flex;
-  margin-bottom: 94px;
 }
 .title {
   margin-top: 0;
@@ -226,6 +224,8 @@ a {
 }
 
 .title-name {
+  display: flex;
+  justify-content: center;
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -236,6 +236,8 @@ a {
   line-height: 1.87;
 }
 .profession {
+  display: flex;
+  justify-content: center;
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -266,27 +268,22 @@ footer .link-logo {
 .contact-footer:focus {
   color: var(--accent-text-color);
 }
+
 /* Portfolio */
-.section-portfolio {
-  margin-top: 94px;
-}
+
 .title-main {
   display: none;
 }
 .list.portfolio-filter {
   display: flex;
   justify-content: center;
-  margin-right: 8px;
   margin-bottom: 50px;
 }
-.list.portfolio-filter:last-child {
-  margin-right: 0;
+.list-filter {
+  margin-right: 8px;
 }
-.list.project {
-  display: flex;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #eeeeee;
-  margin-bottom: 30px;
+.list-filter:last-child {
+  margin-right: 0;
 }
 .filter {
   border-radius: 4px;
@@ -308,21 +305,29 @@ footer .link-logo {
   color: var(--primary-wight-color);
   cursor: pointer;
 }
-.list-project.content {
-  /* margin: 15px; */
-  margin-right: 30px;
-  /* width: calc((100%- (30px * 2)) / 3); */
+.list.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
-.list-project.content:nth-child(3n) {
-  margin-right: 0;
+.list.project > .list-project.content {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .link-project {
-  display: inline-block;
-  padding-bottom: 10px;
+  display: block;
+}
+.card-content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 .picture-project {
   display: block;
-  margin-bottom: 20px;
+  max-width: 100%;
 }
 .title-third.project {
   margin-top: 0;
